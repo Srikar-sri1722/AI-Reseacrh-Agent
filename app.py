@@ -1,14 +1,3 @@
-"""
-AI Research Agent — Streamlit UI ("Signal Deck" edition)
----------------------------------------------------------
-A live AI-lab control deck: four agents shown as glowing nodes on an animated
-signal line, glass panels, an aurora background, and a live stats strip.
-
-Drop this in as your app.py (same folder as agents.py, pipeline.py, tools.py):
-
-    streamlit run app.py
-"""
-
 import textwrap
 import datetime
 import streamlit as st
