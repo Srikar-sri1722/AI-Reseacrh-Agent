@@ -1,219 +1,227 @@
-AI Research Agent
+# 🚀 AI Research Agent
 
+An intelligent **multi-agent AI research assistant** built using **LangChain**, **Mistral AI**, **Tavily Search**, and **Streamlit**. The application automates the complete research workflow by searching the web, extracting detailed information, generating a comprehensive report, and reviewing it using multiple AI agents.
 
+## 🌐 Live Demo
 
-An AI-powered multi-agent research application that searches the web, reads relevant content, writes a structured research report, and reviews the generated response through a critic agent.
+🔗 https://ai-reseacrh-agent-srikar1704.streamlit.app/
 
-Live Demo
+---
 
-Try the deployed application here:
+## 📌 Features
+
+- 🔍 **Search Agent**
+  - Searches the web using Tavily Search API.
+  - Retrieves reliable and relevant sources for the given topic.
+
+- 📖 **Reader Agent**
+  - Selects the most relevant source.
+  - Scrapes detailed information for deeper understanding.
+
+- ✍️ **Writer Chain**
+  - Combines search results and scraped content.
+  - Generates a well-structured research report.
+
+- 📝 **Critic Chain**
+  - Reviews the generated report.
+  - Provides feedback and suggestions for improvement.
+
+- 📥 Download the generated report as a Markdown file.
+
+- 🎨 Beautiful futuristic Streamlit UI with:
+  - Aurora animated background
+  - Live multi-agent workflow visualization
+  - Progress tracking
+  - Interactive dashboard
+
+---
+
+# 🏗️ Architecture
+
+```
+                 User Query
+                      │
+                      ▼
+              🔍 Search Agent
+                      │
+                      ▼
+              📖 Reader Agent
+                      │
+                      ▼
+              ✍️ Writer Chain
+                      │
+                      ▼
+              📝 Critic Chain
+                      │
+                      ▼
+              Final Research Report
+```
+
+---
+
+# 🛠️ Tech Stack
+
+### Programming Language
+
+- Python
+
+### Frameworks
+
+- Streamlit
+- LangChain
+
+### AI Model
+
+- Mistral AI
+
+### Search Engine
+
+- Tavily Search API
+
+### Web Scraping
+
+- BeautifulSoup
+- Requests
+
+### Environment
+
+- Python Dotenv
+
+---
+
+# 📂 Project Structure
+
+```
+AI-Research-Agent/
+│
+├── app.py
+├── agents.py
+├── pipeline.py
+├── tools.py
+├── requirements.txt
+├── .env
+└── README.md
+```
+
+---
+
+# ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/Srikar-sri1722/AI-Reseacrh-Agent.git
+```
+
+Go inside the folder
+
+```bash
+cd AI-Reseacrh-Agent
+```
+
+Create virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Activate it
+
+### Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+### Linux / Mac
+
+```bash
+source .venv/bin/activate
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# 🔑 Environment Variables
+
+Create a `.env` file and add:
+
+```env
+MISTRAL_API_KEY=YOUR_MISTRAL_API_KEY
+TAVILY_API_KEY=YOUR_TAVILY_API_KEY
+```
+
+---
+
+# ▶️ Run the Application
+
+```bash
+streamlit run app.py
+```
+
+---
+
+# 📸 Workflow
+
+1. Enter a research topic.
+2. Search Agent searches the web.
+3. Reader Agent extracts detailed content.
+4. Writer Chain prepares the research report.
+5. Critic Chain reviews the report.
+6. Download the report.
+
+---
+
+# 🚀 Deployment
+
+The application is deployed on **Streamlit Community Cloud**.
+
+Live Website:
 
 https://ai-reseacrh-agent-srikar1704.streamlit.app/
 
-Overview
+---
 
-The application provides a visual research workflow called Signal Deck. A user enters a research topic, and the system processes it through four stages:
+# 📦 Requirements
 
-Search Agent – searches for recent and relevant sources.
+Some of the major packages used:
 
-Reader Agent – selects a useful source and extracts detailed content.
+- streamlit
+- langchain
+- langchain-core
+- langchain-community
+- langchain-mistralai
+- tavily-python
+- beautifulsoup4
+- requests
+- python-dotenv
 
-Writer Chain – combines the collected research into a structured report.
+---
 
-Critic Chain – reviews the report and provides improvement notes.
+# 🔮 Future Improvements
 
-The Streamlit interface displays the progress of each stage through animated nodes, live status cards, statistics, run history, and a downloadable Markdown report.
+- PDF report generation
+- Citation support
+- Multi-source comparison
+- Research history
+- Export to DOCX and PDF
+- Voice input support
+- Multi-language research
 
-Features
+---
 
-Multi-agent research pipeline
+# 👨‍💻 Author
 
-Web search using Tavily
+**Kandula Srikar**
 
-Webpage content extraction
+- GitHub: https://github.com/Srikar-sri1722
+- LinkedIn: https://www.linkedin.com/in/kandula-srikar-878b19317/
 
-Report generation using Mistral AI
+---
 
-AI-based report review and feedback
-
-Animated Streamlit user interface
-
-Live pipeline progress tracking
-
-Research statistics display
-
-Session-based run history
-
-Downloadable Markdown reports
-
-Streamlit Community Cloud deployment
-
-Workflow
-
-flowchart LR
-    A[User Research Topic] --> B[Search Agent]
-    B --> C[Reader Agent]
-    C --> D[Writer Chain]
-    D --> E[Critic Chain]
-    E --> F[Final Report and Review]
-
-Tech Stack
-
-Python
-
-Streamlit
-
-LangChain
-
-Mistral AI
-
-Tavily Search API
-
-Beautiful Soup
-
-Requests
-
-HTML and CSS
-
-Project Structure
-
-AI-Reseacrh-Agent/
-│
-├── app.py              # Streamlit user interface and live pipeline execution
-├── agents.py           # Search agent, scraping agent, writer and critic chains
-├── pipeline.py         # Research pipeline logic or shared pipeline components
-├── tools.py            # Search and web-scraping tools
-├── requirements.txt    # Python dependencies
-├── README.md            # Project documentation
-└── .env                 # Local API keys; do not upload this file
-
-Installation
-
-1. Clone the repository
-
-git clone https://github.com/Srikar-sri1722/AI-Reseacrh-Agent.git
-cd AI-Reseacrh-Agent
-
-2. Create a virtual environment
-
-Using uv:
-
-uv venv
-
-Activate it on Windows PowerShell:
-
-.venv\Scripts\Activate.ps1
-
-3. Install dependencies
-
-uv pip install -r requirements.txt
-
-You can also use regular pip:
-
-pip install -r requirements.txt
-
-Environment Variables
-
-Create a .env file in the project root:
-
-MISTRAL_API_KEY=your_mistral_api_key
-TAVILY_API_KEY=your_tavily_api_key
-
-Do not commit your .env file or API keys to GitHub.
-
-Recommended .gitignore entries:
-
-.env
-.venv/
-__pycache__/
-*.pyc
-.streamlit/secrets.toml
-
-Run Locally
-
-streamlit run app.py
-
-Or with uv:
-
-uv run streamlit run app.py
-
-The application will normally open at:
-
-http://localhost:8501
-
-How to Use
-
-Open the application.
-
-Enter a research topic in the sidebar.
-
-Click Run the deck.
-
-Watch the Search, Reader, Writer, and Critic stages execute.
-
-Review the generated report and critic feedback.
-
-Download the report as a Markdown file.
-
-Streamlit Cloud Deployment
-
-To deploy the project on Streamlit Community Cloud:
-
-Push the project to GitHub.
-
-Open Streamlit Community Cloud.
-
-Select this repository.
-
-Set the branch to main.
-
-Set the main file path to app.py.
-
-Add the following values under App settings → Secrets:
-
-MISTRAL_API_KEY = "your_mistral_api_key"
-TAVILY_API_KEY = "your_tavily_api_key"
-
-Save the secrets and reboot the app.
-
-Security
-
-Never commit API keys to GitHub.
-
-Store local secrets in .env.
-
-Store deployed secrets in Streamlit Community Cloud Secrets.
-
-Regenerate any API key that has been publicly exposed.
-
-Future Improvements
-
-Add citations and clickable source links to the final report
-
-Search and analyze multiple webpages instead of one lead source
-
-Add PDF export support
-
-Add report formatting options
-
-Save research history in a database
-
-Add user authentication
-
-Add retry and fallback handling for API failures
-
-Support additional LLM providers
-
-Add streaming model responses
-
-Author
-
-Kandula Srikar
-
-GitHub: Srikar-sri1722
-
-Live Application: AI Research Agent
-
-License
-
-This project is intended for educational and portfolio purposes. Add a license file if you plan to distribute or reuse it publicly.
+## ⭐ If you like this project, consider giving it a Star!
